@@ -1,12 +1,9 @@
-import { FeedBack } from 'components/FeedBack/Feed-Back'
-
-const feedback = new FeedBack();
-
+import { FeedBack } from 'components/FeedBack/FeedBack'
 
 export const App = () => {
   return (
-    <div>
-      {feedback.render()}
-    </div>
+    
+   <FeedBack/>
+    
   );
 };
