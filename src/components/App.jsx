@@ -1,6 +1,6 @@
 import { FeedBack } from 'components/FeedBack/Feed-Back'
 
-const feedback = new FeedBack;
+const feedback = new FeedBack();
 
 
 export const App = () => {
