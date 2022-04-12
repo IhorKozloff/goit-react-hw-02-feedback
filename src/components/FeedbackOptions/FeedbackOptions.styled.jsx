@@ -12,3 +12,4 @@ export const Btn = styled.button`
     border-radius: 5px;
     cursor: pointer;
 `;
+// :)
