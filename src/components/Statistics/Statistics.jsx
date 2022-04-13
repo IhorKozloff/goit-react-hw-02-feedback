@@ -1,20 +1,21 @@
 import { ResultList, ResultItem, ResultValue } from 'components/Statistics/Statistics.styled';
 
-export const Statistic = ({good, neutral, bad, total, positivePercentage}) => {
+export const Statistic = ({data, total, positivePercentage}) => {
 return (
     <ResultList className="result-list">
-        <ResultItem className="result-item">
-            Good:
-            <ResultValue className="result-content">{good}</ResultValue>
-        </ResultItem>
-        <ResultItem className="result-item">
-            Neutral:
-            <ResultValue className="result-content">{neutral}</ResultValue>
-        </ResultItem>
-        <ResultItem className="result-item">
-            Bad:
-            <ResultValue className="result-content">{bad}</ResultValue>
-        </ResultItem>
+           
+        {
+            Object.keys(data).map(item => {
+                
+                return (
+                    <ResultItem key={item} className="result-item">
+                        {item}:
+                        <ResultValue className="result-content">{data[item]}</ResultValue>
+                    </ResultItem>
+                )
+            })
+        }
+
         <ResultItem className="result-item">
             Total:
             <ResultValue className="result-content">{total}</ResultValue>
